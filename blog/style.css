@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(51, 51, 68);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding-bottom: 100px; 
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.filter-container {
+    width: 80vw;
+    margin-top: 20px;
+    max-width: 800px;
+}
+
+
+.filter {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+}
+
+.post {
+    position: relative;
+    background-color: rgb(98, 98, 107);
+    box-shadow: 0 3px 5px rgb(15, 15, 15);
+    margin: 35px 0;
+    padding: 25px;
+    display: flex;
+    width: 80vw;
+    max-width: 800px;
+}
+
+.post .number {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    color: rgb(51, 51, 68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.loader {
+    opacity:0;
+    display: flex;
+    position: fixed;
+    bottom: 50px;
+    transition: opacity 0.3s ease-in;
+}
+
+.loader.show {
+    opacity: 1;
+}
+
+.circle {
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    animation: bounce 0.5s ease-in infinite;
+}
+
+.circle:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.circle:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
